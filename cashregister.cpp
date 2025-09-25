@@ -10,9 +10,9 @@ class CashRegister
 {
 public:
     /**
-        Clears this cash register
+        Default constructor
     */
-   void clear();
+    CashRegister();
 
     /**
         Adds an item to this cash register.
@@ -37,8 +37,8 @@ private:
     double total_price;
 };
 
-// Define the member functions of CashRegister
-void CashRegister::clear()
+// Define the default constructor
+CashRegister::CashRegister()
 {
     item_count = 0;
     total_price = 0;
@@ -73,8 +73,8 @@ void display(CashRegister reg)
 
 int main()
 {
-    CashRegister register1; // Define an object of the CashRegister class
-    register1.clear();
+    // Define an object of the CashRegister class with default constructor
+    CashRegister register1;
     register1.add_item(1.95);
     display(register1);
 

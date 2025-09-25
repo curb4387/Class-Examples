@@ -10,6 +10,11 @@ class Counter
 {
 public:
     /**
+        Default constructor
+    */
+    Counter();
+
+    /**
         Clears this counter
     */    
     void reset(); // mutator function
@@ -27,6 +32,12 @@ public:
 private:
     int value; // a data member
 };
+
+// Define the default constructor
+Counter::Counter()
+{
+    value = 0;
+}
 
 // Define the functions
 void Counter::reset()
@@ -52,21 +63,31 @@ void display(Counter count)
 int main()
 {
     Counter tally; // Declare an object of the class Counter
-    tally.reset();
+    Counter attendance; // Declare a second object of Counter
     tally.count();
     display(tally);
+    attendance.count();
+    display(attendance);
 
     tally.count();
     display(tally);
+    attendance.count();
+    display(attendance);
 
     tally.count();
     display(tally);
+    attendance.count();
+    display(attendance);
 
-    tally.reset();
+    tally.reset(); // Reset tally object's count
     display(tally);
+    attendance.count(); // Don't reset attendance object's count
+    display(attendance);
 
     tally.count();
     display(tally);
+    attendance.count();
+    display(attendance);
 
     return 0;
 }

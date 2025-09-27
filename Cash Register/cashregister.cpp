@@ -10,7 +10,8 @@ class CashRegister
 {
 public:
     /**
-        Default constructor
+        Default constructor, constructs a cash register with cleared
+        item count and total.
     */
     CashRegister();
 
@@ -44,6 +45,11 @@ private:
 
 // Define the default constructor
 CashRegister::CashRegister()
+{
+    clear();
+}
+
+void CashRegister::clear()
 {
     item_count = 0;
     total_price = 0;

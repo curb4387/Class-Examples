@@ -15,6 +15,11 @@ public:
     CashRegister();
 
     /**
+        Clears the item count and the total.
+    */
+    void clear();
+
+    /**
         Adds an item to this cash register.
         @param price the price of the added item
     */
